@@ -2,11 +2,13 @@
 public class Student extends Person
 {
     private int studentNumber;
+    private int graduationYear;
 
     public Student( )
     {
         super( );
         studentNumber = 0;//Indicating no number yet
+        graduationYear = 0;
     }
 
     public Student(String initialName, int initialStudentNumber)
