@@ -2,24 +2,26 @@
 public class Undergraduate extends Student
 {
     private int level; //1 for freshman, 2 for sophomore,
-                       //3 for junior, or 4 for senior.
+    private String major;                   //3 for junior, or 4 for senior.
     public Undergraduate( )
     {
         super( );
         level = 1;
+        major = "No major selected";
     }
     
     public Undergraduate(String initialName, int initialStudentNumber, 
                          int initialLevel)
     {
         super(initialName, initialStudentNumber);
-        setLevel(initialLevel); //Checks 1 <= initialLevel <= 4
+        setLevel(initialLevel)
+        ; //Checks 1 <= initialLevel <= 4
     }
     
     public void reset(String newName, int newStudentNumber, 
 	                  int newLevel)
     {
-        reset(newName, newStudentNumber); //StudentÕs reset
+        reset(newName, newStudentNumber); //Studentï¿½s reset
         setLevel(newLevel); //Checks 1 <= newLevel <= 4
     }
     

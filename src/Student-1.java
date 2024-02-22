@@ -4,22 +4,29 @@ public class Student extends Person
     private int studentNumber;
     private int graduationYear;
 
+
+    /**
+     * Default constructor, added all default values (including super class)
+     * -> super() grabs default values from Person class
+     */
     public Student( )
     {
         super( );
-        studentNumber = 0;//Indicating no number yet
+        studentNumber = 0;
         graduationYear = 0;
     }
 
-    public Student(String initialName, int initialStudentNumber)
+    public Student(String name, String birthdate, String initialName, int studentNumber, int graduationYear)
     {
-        super(initialName);
-        studentNumber = initialStudentNumber;
+        super(name, birthdate);
+        setStudentNumber(studentNumber);
+        setGraduationYear(graduationYear);
     }
 
-    public void reset(String newName, int newStudentNumber)
+    public void reset(String newName, String newBirthdate, int newStudentNumber, int newGraduationYear)
     {
-        setName(newName);
+        super(name, birthdate);
+        graduationYear = newGraduationYear;
         studentNumber = newStudentNumber;
     }
 
@@ -32,6 +39,10 @@ public class Student extends Person
     {
         studentNumber = newStudentNumber;
     }
+    public int getGradtionYear(){
+        return graduationYear;
+    }
+    public int setGraduationYear(int initGraduationYear) { graduationYear = initGraduationYear; }
 
     public void writeOutput( )
     {
@@ -49,7 +60,9 @@ public class Student extends Person
     public String toString( )
     {
         return "Name: " + getName( ) +
-			   "\nStudent number: "  + studentNumber;
+                "\nBirthdate: " + getBirthdate( ) +
+			   "\nStudent number: "  + studentNumber +
+                "\nGraduation year: " + graduationYear;
     }
 
  /* //For Optional Section

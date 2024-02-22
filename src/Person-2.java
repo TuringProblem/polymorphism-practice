@@ -18,8 +18,8 @@ public class Person {
      * @param birthdate -> grabs the instance variable birthdate
      */
     public Person(String name, String birthdate) {
-        this.name = name;
-        this.birthdate = birthdate;
+        setName(name);
+        setBirthdate(birthdate);
     }
 
     /**
@@ -28,7 +28,7 @@ public class Person {
      *                getName() returns the set value
      */
 
-    public void setName(String newName) { name = newName; }
+    public void setName(String name) { this.name = name; }
 
     public String getName() {
         return name;
@@ -39,7 +39,7 @@ public class Person {
      *                      getBirthdate() returns the set value
      */
 
-    public void setBirthdate(String initBirthDate) { birthdate = initBirthDate; }
+    public void setBirthdate(String birthdate) { this.birthdate = birthdate; }
     public String getBirthdate() { return birthdate; }
     public void writeOutput() {
         System.out.printf("Name: %s \nBirthdate: %s\n", name, birthdate);
