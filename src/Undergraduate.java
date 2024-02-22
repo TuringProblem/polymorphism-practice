@@ -10,12 +10,11 @@ public class Undergraduate extends Student
         major = "No major selected";
     }
     
-    public Undergraduate(String initialName, int initialStudentNumber, 
-                         int initialLevel)
+    public Undergraduate(String initialName, int initialStudentNumber, int initialLevel, string initialMajor)
     {
         super(initialName, initialStudentNumber);
-        setLevel(initialLevel)
-        ; //Checks 1 <= initialLevel <= 4
+        setLevel(initialLevel); //Checks 1 <= initialLevel <= 4
+        setMajor(initialMajor);
     }
     
     public void reset(String newName, int newStudentNumber, 
@@ -40,17 +39,18 @@ public class Undergraduate extends Student
             System.exit(0);
         }
     }
-    
+    public String getMajor( ){ return major; }
+    public void setMajor(String major) { this.major = major;}
     public void writeOutput( )
     {
         super.writeOutput( );
-        System.out.println("Student Level: " + level);
+        System.out.printf("Student Level: %d \nStudent Major: %s", level, major);
     }
  
     public boolean equals(Undergraduate otherUndergraduate)
     {
         return equals((Student)otherUndergraduate) &&
-               (this.level == otherUndergraduate.level);
+               (this.level == otherUndergraduate.level || this.major.equals(otherUndergraduate.major);
     }
 /*  // Alternate version 
     public boolean equals(Undergraduate otherUndergraduate)

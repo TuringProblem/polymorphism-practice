@@ -16,7 +16,7 @@ public class Student extends Person
         graduationYear = 0;
     }
 
-    public Student(String name, String birthdate, String initialName, int studentNumber, int graduationYear)
+    public Student(String name, String birthdate, int studentNumber, int graduationYear)
     {
         super(name, birthdate);
         setStudentNumber(studentNumber);
