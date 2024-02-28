@@ -1,11 +1,10 @@
-/*
 
 public class UndergraduateDemo
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Undergraduate ug1 = new Undergraduate("James Bond", 007, 1);
         ug1.writeOutput();
+        System.out.println();
         ug1.reset("Sam Spade", 1940, 2);
         System.out.println("ug1 is:");
         ug1.writeOutput();
@@ -14,11 +13,11 @@ public class UndergraduateDemo
         System.out.println("\nug2 is:");
         ug2.writeOutput();
         if (ug1.equals(ug2))
-            System.out.println("Same students.");
+            System.out.println("Same students.\n");
         else
-            System.out.println("Not the same students.");
+            System.out.println("Not the same students.\n");
 
-       //hasSameName inherited from Student, which inherited it from Person.
+        //hasSameName inherited from Student, which inherited it from Person.
         if (ug1.hasSameName(ug2))
             System.out.println("Same names.");
         else
@@ -28,10 +27,14 @@ public class UndergraduateDemo
         System.out.println("\nug3 is:");
         ug3.writeOutput();
         if (ug3.equals(ug2))
+            System.out.println("Same students.\n");
+        else
+            System.out.println("Not the same students.\n");
+        Undergraduate ug4 = new Undergraduate("James Bond", 0077, 1, "Science");
+        ug4.writeOutput();
+        if (ug4.equals(ug3))
             System.out.println("Same students.");
         else
-            System.out.println("Not the same students.");
-
-
+            System.out.println("Not the same students.\n");
     }
-}*/
+}
