@@ -12,6 +12,11 @@ public class Student extends Person {
         studentNumber = initialStudentNumber;
     }
 
+    public Student(String initialName, int initialStudentNumber, int initialBirthdate) {
+        super(initialName, initialBirthdate);
+        studentNumber = initialStudentNumber;
+    }
+
     public void reset(String newName, int newBirthdate, int newStudentNumber) {
         setName(newName);
         setBirthdate(newBirthdate);
@@ -22,7 +27,11 @@ public class Student extends Person {
 
     public void setStudentNumber(int newStudentNumber) { studentNumber = newStudentNumber;}
 
-    public void writeOutput() { System.out.printf("Name: %s\nStudent Number: %d\n", getName(), getStudentNumber()); }
+    /**
+     * @return the output of the Student (
+     */
+    @Override
+    public void writeOutput() {  super.writeOutput(); System.out.printf("Name: %s\nStudent Number: %d\n", getName(), getStudentNumber()); }
 
     public boolean equals(Student otherStudent) {
         return this.hasSameName(otherStudent) &&

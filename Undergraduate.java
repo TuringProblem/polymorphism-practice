@@ -73,9 +73,8 @@ public class Undergraduate extends Student {
      * Outputs the super class (Student name and number) -> and prints level and the major of the student
      * if the major is null, it will print "undeclared" -> along with the levels being String now instead of Integer.
      */
-
-    public void writeOutput( )
-    {
+    @Override
+    public void writeOutput( ) {
         super.writeOutput( );
         System.out.printf("Level: %s\n", levelToDegree());
         if (major == null) {
@@ -85,14 +84,12 @@ public class Undergraduate extends Student {
         }
     }
  
-    public boolean equals(Undergraduate otherUndergraduate)
-    {
+    public boolean equals(Undergraduate otherUndergraduate) {
         return equals((Student)otherUndergraduate) &&
                (this.level == otherUndergraduate.level);
     }
 /*  // Alternate version 
-    public boolean equals(Undergraduate otherUndergraduate)
-    {
+    public boolean equals(Undergraduate otherUndergraduate) {
         return super.equals(otherUndergraduate) &&
                (this.level == otherUndergraduate.level);
     }
