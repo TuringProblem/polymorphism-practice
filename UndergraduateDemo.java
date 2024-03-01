@@ -31,6 +31,7 @@ public class UndergraduateDemo
         else
             System.out.println("Not the same students.\n");
         Undergraduate ug4 = new Undergraduate("James Bond", 0077, 1, "Science");
+        System.out.println("ug4 is: \n");
         ug4.writeOutput();
         if (ug4.equals(ug3))
             System.out.println("Same students.");
