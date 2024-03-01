@@ -35,7 +35,7 @@ public class Person {
     /**
      * @returns the value of the birthdate, if it is 0, then it will return "N/A", else it will return the birthdate.
      */
-    public String myLogic() { return birthdate == 0 ? switch (birthdate){ case 0 -> "N/A"; default -> " ";} : String.valueOf(getBirthdate()); }
+    public String myLogic() { return switch (birthdate){ case 0 -> "N/A"; default -> String.valueOf(getBirthdate());};}
 
     /**
      * Add if statement to check if the birthdate is 0, then print N/A.
@@ -47,4 +47,9 @@ public class Person {
      * @return -> boolean logic to check if the name is the same as the other person's name.
      */
     public boolean hasSameName(Person otherPerson) { return this.name.equalsIgnoreCase(otherPerson.name); }
+    /**
+     * Again, although we have a method that writes the output, it is still nice to send toString()--in the case, we would like to print just the string values in the class.
+     */
+    @Override
+    public String toString() { return "Name: " + name + "\nBirthdate: " + myLogic();}
 }

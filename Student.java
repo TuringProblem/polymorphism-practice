@@ -28,17 +28,23 @@ public class Student extends Person {
     public void setStudentNumber(int newStudentNumber) { studentNumber = newStudentNumber;}
 
     /**
-     * @return the output of the Student (
+     * @return the output of the Student and the Student Number
      */
     @Override
     public void writeOutput() {  super.writeOutput(); System.out.printf("Name: %s\nStudent Number: %d\n", getName(), getStudentNumber()); }
 
+
+    /**
+     * @param otherStudent
+     * @return boolean logic -> if the name is the same name as other students -> return true, else return false.
+     */
     public boolean equals(Student otherStudent) {
         return this.hasSameName(otherStudent) &&
                 (this.studentNumber == otherStudent.studentNumber);
     }
-
-
+    /**
+     * Although we have a method that writes the output, it is still nice to send toString() :) incase you would like to use it
+     */
     public String toString() {
         return "Name: " + getName() +
                 "\nStudent number: " + studentNumber;
