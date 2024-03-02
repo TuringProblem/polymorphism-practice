@@ -6,7 +6,6 @@
 public class Person {
     private String name;
     private int birthdate;
-
     /**
      * @Constructor -> person() -> default
      * @Constructor -> person(String name) -> overloading Person
@@ -18,7 +17,6 @@ public class Person {
         this.name = name;
         this.birthdate = birthdate;
     }
-
     /**
      * @param newName -> returns the name of the person... getName() -> Retrieves that data passed.
      */

@@ -71,7 +71,6 @@ public class Undergraduate extends Student {
         }
         return "You are NOT a student!";
     }
-
     /**
      * Outputs the super class (Student name and number) -> and prints level and the major of the student
      * if the major is null, it will print "undeclared" -> along with the levels being String now instead of Integer.
@@ -86,8 +85,6 @@ public class Undergraduate extends Student {
             System.out.printf("Major: %s\n", getMajor());
         }
     }
-
-
     /**
      * @param otherUndergraduate
      * checks if the parent class has the same name as the subclass, and if the level is the same as the subclass.

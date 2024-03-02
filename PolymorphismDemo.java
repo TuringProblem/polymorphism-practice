@@ -1,5 +1,9 @@
-public class PolymorphismDemo
-{
+/**
+ * @author: Override
+ * @since 02/29/2024 @ 19:54
+ * @see <a href="https://Github.com/TuringProblem">GitHub Profile</a>
+ */
+public class PolymorphismDemo {
 	public static void main(String[] args) {
 		Person[] people = new Person[5];
 
