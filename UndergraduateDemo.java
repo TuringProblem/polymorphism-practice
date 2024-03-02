@@ -2,10 +2,8 @@ import java.util.ArrayList;
 
 public class UndergraduateDemo {
     public static void main(String[] args) {
-        ArrayList<Undergraduate> undergraduates = new ArrayList<>();
-        for (Undergraduate num : undergraduates) {
-            undergraduates.add(num);
-        }
+
+
 
         Undergraduate ug1 = new Undergraduate("James Bond", 007, 1);
         ug1.writeOutput();

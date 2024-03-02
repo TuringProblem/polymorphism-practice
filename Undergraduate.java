@@ -70,7 +70,7 @@ public class Undergraduate extends Student {
             e.printStackTrace();
         }
         return "You are NOT a student!";
-    }
+    }//this is where I was prooud of myself hahaha and one more spot
     /**
      * Outputs the super class (Student name and number) -> and prints level and the major of the student
      * if the major is null, it will print "undeclared" -> along with the levels being String now instead of Integer.
