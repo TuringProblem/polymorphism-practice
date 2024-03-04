@@ -50,4 +50,9 @@ public class Person {
      */
     @Override
     public String toString() { return "Name: " + name + "\nBirthdate: " + myLogic();}
+
+    /**
+     * Checker for if the person is a student
+     */
+    public boolean isStudent() { return true; }
 }

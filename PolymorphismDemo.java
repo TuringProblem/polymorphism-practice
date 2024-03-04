@@ -1,3 +1,4 @@
+
 /**
  * @author: Override
  * @since 02/29/2024 @ 19:54
@@ -13,10 +14,13 @@ public class PolymorphismDemo {
 		people[3] = new Undergraduate("Bugg, June", 9901, 4);
 		people[4] = new Person("Bugg, June", 9901);
 
+
 		for (Person p : people)
 		{
 			p.writeOutput();
 			System.out.println();
 		}
+
+
 	}
 }

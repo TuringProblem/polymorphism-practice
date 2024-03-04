@@ -1,5 +1,5 @@
 /**
- * @author: Override
+ * @author Override
  * @since 02/29/2024 @ 19:51
  * @see <a href="https://Github.com/TuringProblem">GitHubProfile</a>
  */
@@ -11,9 +11,9 @@ public class Undergraduate extends Student {
     private String major;
 
     /**
-     * @Constructor -> Undergraduate() -> default
-     * @Constructor -> Undergraduate(String initialName, int initialStudentNumber, int initialLevel) -> overloading Undergraduate with super class init name
-     * @Constructor -> Undergraduate(String initialName, int initialStudentNumber, int initialLevel, String myMajor) -> overloading Undergraduate with super class init name and init major
+     * Constructor -> Undergraduate() -> default
+     * Constructor -> Undergraduate(String initialName, int initialStudentNumber, int initialLevel) -> overloading Undergraduate with super class init name
+     * Constructor -> Undergraduate(String initialName, int initialStudentNumber, int initialLevel, String myMajor) -> overloading Undergraduate with super class init name and init major
      */
     public Undergraduate( ) {
         super( );
@@ -70,7 +70,7 @@ public class Undergraduate extends Student {
             e.printStackTrace();
         }
         return "You are NOT a student!";
-    }//this is where I was prooud of myself hahaha and one more spot
+    }//this is where I was proud of myself hahaha and one more spot
     /**
      * Outputs the super class (Student name and number) -> and prints level and the major of the student
      * if the major is null, it will print "undeclared" -> along with the levels being String now instead of Integer.
@@ -79,7 +79,7 @@ public class Undergraduate extends Student {
     public void writeOutput( ) {
         super.writeOutput( );
         System.out.printf("Level: %s\n", levelToDegree());
-        if (major == null) {
+        if (major.equalsIgnoreCase("") || major.equalsIgnoreCase(null)) {
             System.out.println("Major: undeclared\n");
         } else {
             System.out.printf("Major: %s\n", getMajor());

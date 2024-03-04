@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Student extends Person {
     private int studentNumber;
     /**
@@ -34,7 +36,7 @@ public class Student extends Person {
      * @return the output of the Student and the Student Number
      */
     @Override
-    public void writeOutput() {  super.writeOutput(); System.out.printf("Name: %s\nStudent Number: %d\n", getName(), getStudentNumber()); }
+    public void writeOutput() {  super.writeOutput(); System.out.printf("Student Number: %d\n", getStudentNumber()); }
     /**
      * @param otherStudent
      * @return boolean logic -> if the name is the same name as other students -> return true, else return false.
@@ -50,6 +52,7 @@ public class Student extends Person {
         return "Name: " + getName() +
                 "\nStudent number: " + studentNumber;
     }
+
  /* //For Optional Section
     public boolean equals(Object otherObject)
     {
@@ -66,5 +69,4 @@ public class Student extends Person {
         }
     }
 */
-
 }

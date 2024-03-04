@@ -1,6 +1,9 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class UndergraduateDemo {
+
+	static Scanner KEYBOARD = new Scanner(System.in);
     public static void main(String[] args) {
 
 
@@ -44,5 +47,46 @@ public class UndergraduateDemo {
             System.out.println("Same names");
         else
             System.out.println("Not the same names");
+
+
+        System.out.println("Are you a student?");
+        String response = KEYBOARD.nextLine().toLowerCase();
+
+        if (response.equalsIgnoreCase("yes")) {
+            Student stud = new Student();
+            System.out.println("Are you an undergraduate?");
+            {
+                response = KEYBOARD.nextLine().toLowerCase();
+                if (response.equalsIgnoreCase("yes")) {
+                    Undergraduate undergrad = new Undergraduate();
+                    System.out.println("What is your name?");
+                    undergrad.setName(KEYBOARD.nextLine());
+                    System.out.println("What is your birthdate?");
+                    undergrad.setBirthdate(KEYBOARD.nextInt());
+                    KEYBOARD.nextLine();
+                    System.out.println("what is your student number?");
+                    undergrad.setStudentNumber(KEYBOARD.nextInt());
+                    KEYBOARD.nextLine();
+                    System.out.println("What year are you currently on?\nie: 1 == freshman | 4 == Senior: ");
+                    undergrad.setMajor(KEYBOARD.nextLine());
+                    System.out.println("What is your major? ");
+                    undergrad.setMajor(KEYBOARD.nextLine());
+                    undergrad.writeOutput();
+                } else {
+                    System.out.println("You must not attend this University.");
+                    System.out.println("do you have a name?");
+                    stud.setName(KEYBOARD.nextLine());
+                    System.out.println("What is your birthdate: ");
+                    stud.setBirthdate(KEYBOARD.nextInt());
+                    KEYBOARD.nextLine();
+                    System.out.println("how about a student ID? Type an integer: ");
+                    stud.setStudentNumber(KEYBOARD.nextInt());
+                    stud.writeOutput();
+                }
+            }
+        } else {
+            System.out.println("You are not a student...");
+        }
+
     }
 }
