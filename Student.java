@@ -13,11 +13,12 @@ public class Student extends Person {
     }
     public Student(String initialName, int initialStudentNumber) {
         super(initialName);
-        studentNumber = initialStudentNumber;
+        setStudentNumber(initialStudentNumber);
+
     }
-    public Student(String initialName, int initialStudentNumber, int initialBirthdate) {
+    public Student(String initialName, int initialBirthdate, int initialStudentNumber)  {
         super(initialName, initialBirthdate);
-        studentNumber = initialStudentNumber;
+        setStudentNumber(initialStudentNumber);
     }
     /**
      * Method resets the initial name, birthdate, student number
@@ -25,7 +26,7 @@ public class Student extends Person {
     public void reset(String newName, int newBirthdate, int newStudentNumber) {
         setName(newName);
         setBirthdate(newBirthdate);
-        studentNumber = newStudentNumber;
+        setStudentNumber(newStudentNumber);
     }
     /**
      * Setters/Getters for student number -> getStudentNumber() -> returns the number. setStudentNumber() -> sets the init value for student number
@@ -36,7 +37,10 @@ public class Student extends Person {
      * @return the output of the Student and the Student Number
      */
     @Override
-    public void writeOutput() {  super.writeOutput(); System.out.printf("Student Number: %d\n", getStudentNumber()); }
+    public void writeOutput() {
+        super.writeOutput();
+        System.out.printf("Student Number: %d\n", getStudentNumber());
+    }
     /**
      * @param otherStudent
      * @return boolean logic -> if the name is the same name as other students -> return true, else return false.

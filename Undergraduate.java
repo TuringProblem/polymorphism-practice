@@ -28,6 +28,12 @@ public class Undergraduate extends Student {
         setLevel(initialLevel); //Checks 1 <= initialLevel <= 4
         setMajor(myMajor);
     }
+    public Undergraduate(String initName, int initStudentNumber, int initBirthdate, int initLevel, String myMajor) {
+        super(initName, initStudentNumber, initBirthdate);
+        setLevel(initLevel);
+        setMajor(myMajor);
+
+    }
     public void reset(String newName, int newStudentNumber, int newBirthdate, int newLevel, String myMajor) {
         reset(newName, newStudentNumber, newBirthdate); //Student�s reset
         setLevel(newLevel); //Checks 1 <= newLevel <= 4
@@ -79,11 +85,16 @@ public class Undergraduate extends Student {
     public void writeOutput( ) {
         super.writeOutput( );
         System.out.printf("Level: %s\n", levelToDegree());
-        if (major.equalsIgnoreCase("") || major.equalsIgnoreCase(null)) {
-            System.out.println("Major: undeclared\n");
-        } else {
-            System.out.printf("Major: %s\n", getMajor());
+        try {
+            if (getMajor().equalsIgnoreCase(null)) {
+                System.out.println("Major: undeclared\n");
+            } else {
+                System.out.printf("Major: %s\n", getMajor());
+            }
+        } catch(NullPointerException e) {
+            System.out.println("Major: No major");
         }
+
     }
     /**
      * @param otherUndergraduate
